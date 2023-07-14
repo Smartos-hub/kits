@@ -1,7 +1,7 @@
 import round from "lodash-es/round";
 import pluralize from "pluralize";
-import { CURRENCY_UNIT } from "../constants";
 import i18next from "i18next";
+import { CURRENCY_UNIT } from "../constants";
 
 export const formatMoney = (num?: number | string | null, digits = 3) => {
   if (!num || isNaN(Number(num))) return `0 ${CURRENCY_UNIT}`;
@@ -10,7 +10,7 @@ export const formatMoney = (num?: number | string | null, digits = 3) => {
 
   return `${roundNum
     .toString()
-    .replace(/^[+-]?\d+/, (init) =>
+    .replace(/^[+-]?\d+/, init =>
       init.replace(
         new RegExp(`(\\d)(?=(\\d{${fallbackDigits}})+$)`, "g"),
         "$1,"

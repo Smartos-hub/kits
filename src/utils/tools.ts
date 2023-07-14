@@ -1,18 +1,18 @@
 import get from "lodash-es/get";
 import { forEach, reduce } from "lodash-es";
 import { parse, stringify } from "query-string";
+import i18next from "i18next";
 import { Maybe, Scalars, TCommonObj } from "../interface/utils";
 import { LIMIT_TRUNCATE_TEXT } from "../constants";
-import i18next from "i18next";
 
 export function convertDataToSelectOptions<T>(
   data: T[],
   valueProp: string,
   labelProp: string
 ) {
-  return data?.map((item) => ({
+  return data?.map(item => ({
     label: get(item, labelProp),
-    value: get(item, valueProp),
+    value: get(item, valueProp)
   }));
 }
 
@@ -51,7 +51,7 @@ export function isEmpty(value?: string | number | object): boolean {
 export const getValidDataOfObj = ({
   data: obj,
   isCreateEdit = false,
-  isTrimStr = true,
+  isTrimStr = true
 }: {
   data: TCommonObj;
   isCreateEdit?: boolean;
@@ -68,7 +68,7 @@ export const getValidDataOfObj = ({
         const formatChildValue = getValidDataOfObj({
           data: value,
           isCreateEdit,
-          isTrimStr,
+          isTrimStr
         });
         return !isEmpty(formatChildValue)
           ? { ...result, [key]: formatChildValue }
@@ -102,17 +102,17 @@ export const getValidDataOfObj = ({
 export const convertObjToSearchStr = (params: TCommonObj) => {
   let obj = {};
 
-  Object.entries(getValidDataOfObj({ data: params })).forEach((data) => {
+  Object.entries(getValidDataOfObj({ data: params })).forEach(data => {
     const [key, value] = data;
     if (typeof value === "string") {
       obj = {
         ...obj,
-        [key]: value,
+        [key]: value
       };
     } else {
       obj = {
         ...obj,
-        [key]: JSON.stringify(value),
+        [key]: JSON.stringify(value)
       };
     }
   });

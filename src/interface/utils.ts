@@ -12,7 +12,7 @@ export enum QueryOperator {
   Lte = "lte",
   Neq = "neq",
   Nin = "nin",
-  UnaccentLike = "unaccentLike",
+  UnaccentLike = "unaccentLike"
 }
 
 export type InputMaybe<T> = Maybe<T>;
@@ -72,12 +72,12 @@ export enum Query_Operator {
   Lte = "lte",
   Neq = "neq",
   Nin = "nin",
-  UnaccentLike = "unaccentLike",
+  UnaccentLike = "unaccentLike"
 }
 
 export enum Order_By_Operator {
   DESC = "DESC",
-  ASC = "ASC",
+  ASC = "ASC"
 }
 
 export interface FilterDto {

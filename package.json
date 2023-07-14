@@ -1,22 +1,39 @@
 {
   "name": "@smartos/kit",
   "author": "Cinny",
-  "version": "0.1.4",
-  "main": "dist/kit.esm.js",
-  "module": "dist/kit.esm.js",
+  "version": "0.3.8",
   "type": "module",
-  "types": "dist/index.d.ts",
   "files": [
     "dist"
   ],
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/kit.esm.js",
-      "require": "./dist/kit.esm.js"
+      "import": "./dist/index.js"
     },
     "./hooks": {
-      "import": "./dist/kit.esm.js",
-      "require": "./dist/kit.esm.js"
+      "import": "./dist/hooks.js"
+    },
+    "./utils": {
+      "import": "./dist/utils.js"
+    },
+    "./ui": {
+      "import": "./dist/ui.js"
+    }
+  },
+  "typesVersions": {
+    "*": {
+      "hooks": [
+        "./dist/hooks/index.d.ts"
+      ],
+      "utils": [
+        "./dist/utils/index.d.ts"
+      ],
+      "ui": [
+        "./dist/ui/index.d.ts"
+      ]
     }
   },
   "engines": {
@@ -25,7 +42,7 @@
   "license": "MIT",
   "scripts": {
     "prepare": "tsc",
-    "build": "tsdx build --format esm",
+    "build": "tsup",
     "check-types": "tsc --noEmit",
     "lint": "eslint \"src/**/*.{tsx,ts}\" --fix",
     "lint-staged": "lint-staged",
@@ -41,6 +58,7 @@
   "devDependencies": {
     "@enouvo/eslint-config-react": "^1.2.2",
     "@sentry/react": "^7.54.0",
+    "@storybook/react": "^7.0.27",
     "@types/lodash-es": "^4.17.7",
     "@types/pluralize": "^0.0.30",
     "@types/react": "^18.0.24",
@@ -61,6 +79,7 @@
     "react-router-dom": "^5.3.4",
     "ts-node": "^10.9.1",
     "tsdx": "^0.14.1",
+    "tsup": "^7.1.0",
     "typescript": "^4.8.4"
   },
   "peerDependencies": {
@@ -79,9 +98,11 @@
     "typescript": ">=4.8.4"
   },
   "dependencies": {
+    "@apollo/client": "3.5.8",
+    "@types/styled-components": "^5.1.26",
     "antd": "^4.16.13",
     "lodash.get": "^4.4.2",
     "query-string": "^7.1.1",
-    "@apollo/client": "3.5.8"
+    "styled-components": "^5.3.11"
   }
 }
