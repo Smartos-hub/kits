@@ -2,7 +2,7 @@ import { defineConfig } from "tsup";
 
 export default defineConfig({
   // Split output into chunks
-  clean: true,
+  clean: false,
 
   dts: true,
 

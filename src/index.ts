@@ -1,4 +1,4 @@
 export * from "./constants";
-export * from "./hooks/index";
-export * from "./utils/index";
-export * from "./ui/index";
+export * from "./hooks";
+export * from "./utils";
+export * from "./ui";

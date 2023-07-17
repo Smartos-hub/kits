@@ -1,41 +1,10 @@
 {
   "name": "@smartos/kit",
   "author": "Cinny",
-  "version": "0.3.8",
-  "type": "module",
-  "files": [
-    "dist"
-  ],
-  "main": "dist/index.js",
-  "module": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "exports": {
-    ".": {
-      "import": "./dist/index.js"
-    },
-    "./hooks": {
-      "import": "./dist/hooks.js"
-    },
-    "./utils": {
-      "import": "./dist/utils.js"
-    },
-    "./ui": {
-      "import": "./dist/ui.js"
-    }
-  },
-  "typesVersions": {
-    "*": {
-      "hooks": [
-        "./dist/hooks/index.d.ts"
-      ],
-      "utils": [
-        "./dist/utils/index.d.ts"
-      ],
-      "ui": [
-        "./dist/ui/index.d.ts"
-      ]
-    }
-  },
+  "version": "0.4.9",
+  "type": "commonjs",
+  "main": "index.js",
+  "types": "index.d.ts",
   "engines": {
     "node": ">=14"
   },
@@ -102,7 +71,6 @@
     "@types/styled-components": "^5.1.26",
     "antd": "^4.16.13",
     "lodash.get": "^4.4.2",
-    "query-string": "^7.1.1",
     "styled-components": "^5.3.11"
   }
 }
