@@ -15,7 +15,7 @@
     "check-types": "tsc --noEmit",
     "lint": "eslint \"src/**/*.{tsx,ts}\" --fix",
     "lint-staged": "lint-staged",
-    "lint-pass": "echo '\\033[4;32m♡ ' Format complete ♡' \\033[0m'"
+    "lint-pass": "echo '\\033[4;32m♡ ' Format complete ♡ ' \\033[0m'"
   },
   "sideEffects": [
     "*.less"
