@@ -4,3 +4,5 @@
 yarn check-types
 yarn lint-staged
 yarn lint-pass
+
+yarn version --patch
