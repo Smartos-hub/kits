@@ -1,7 +1,7 @@
 {
   "name": "@smartos/kit",
   "author": "Cinny",
-  "version": "0.4.9",
+  "version": "0.4.10",
   "type": "commonjs",
   "main": "index.js",
   "types": "index.d.ts",
