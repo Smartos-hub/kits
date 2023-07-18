@@ -1,7 +1,7 @@
 {
   "name": "@smartos/kit",
   "author": "Cinny",
-  "version": "0.4.12",
+  "version": "0.4.13",
   "type": "commonjs",
   "main": "index.js",
   "types": "index.d.ts",
@@ -10,6 +10,9 @@
   },
   "license": "MIT",
   "scripts": {
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "test:run": "vitest run",
     "prepare": "tsc",
     "build": "tsup",
     "check-types": "tsc --noEmit",
@@ -33,6 +36,7 @@
     "@types/react": "^18.0.24",
     "@types/react-router-dom": "^5.3.3",
     "@typescript-eslint/parser": "^5.42.0",
+    "@vitest/ui": "latest",
     "axios": "^1.4.0",
     "dayjs": "^1.11.9",
     "eslint": "^8.26.0",
@@ -49,7 +53,9 @@
     "ts-node": "^10.9.1",
     "tsdx": "^0.14.1",
     "tsup": "^7.1.0",
-    "typescript": "^4.8.4"
+    "typescript": "^4.8.4",
+    "vite": "latest",
+    "vitest": "latest"
   },
   "peerDependencies": {
     "@apollo/client": "3.5.8",
